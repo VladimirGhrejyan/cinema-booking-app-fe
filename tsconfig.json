@@ -28,7 +28,8 @@
             "~widgets/*": ["src/widgets/*"],
             "~pages/*": ["src/pages/*"],
             "~shared/*": ["src/shared/*"],
-            "~store/*": ["src/store/*"]
+            "~store/*": ["src/store/*"],
+            "~entities/*": ["src/entities/*"]
         }
     },
     "include": ["src"],

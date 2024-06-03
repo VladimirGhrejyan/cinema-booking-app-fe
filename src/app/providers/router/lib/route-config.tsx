@@ -1,9 +1,12 @@
 import { ReactElement } from 'react';
+import { RoomsPage } from '~pages/rooms-page';
+import { RoomPage } from '~pages/room-page';
+import NotFoundPage from '~pages/not-found-page';
 
 export enum EAppPaths {
     HOME = '/',
     ROOM = '/rooms/:roomId',
-    SESSION = '/rooms/:roomId/sessions/:sessionId',
+    SCHEDULE = '/rooms/:roomId/:scheduleId',
     ADMIN = '/admin',
     ADMIN_ROOMS = '/admin/rooms',
     ADMIN_MOVIES = '/admin/movies',
@@ -19,9 +22,9 @@ type TPathRouteProps = {
 type TRouteConfig = Record<string, TPathRouteProps>;
 
 export const routeConfig: TRouteConfig = {
-    [EAppPaths.HOME]: { path: EAppPaths.HOME, element: null },
-    [EAppPaths.ROOM]: { path: EAppPaths.ROOM, element: null },
-    [EAppPaths.SESSION]: { path: EAppPaths.SESSION, element: null },
+    [EAppPaths.HOME]: { path: EAppPaths.HOME, element: <RoomsPage /> },
+    [EAppPaths.ROOM]: { path: EAppPaths.ROOM, element: <RoomPage /> },
+    [EAppPaths.SCHEDULE]: { path: EAppPaths.SCHEDULE, element: null },
     [EAppPaths.ADMIN]: {
         path: EAppPaths.ADMIN,
         element: null,
@@ -30,5 +33,5 @@ export const routeConfig: TRouteConfig = {
             { path: EAppPaths.ADMIN_MOVIES, element: null },
         ],
     },
-    [EAppPaths.NOT_FOUND]: { path: EAppPaths.NOT_FOUND, element: null },
+    [EAppPaths.NOT_FOUND]: { path: EAppPaths.NOT_FOUND, element: <NotFoundPage /> },
 };
