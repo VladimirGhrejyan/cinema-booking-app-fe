@@ -1,0 +1,9 @@
+{
+  "schemaFile": "http://localhost:5000/static/swagger.json",
+  "apiFile": "./src/store/api.ts",
+  "apiImport": "api",
+  "outputFile": "./src/store/generated-api.ts",
+  "exportName": "cinemaApi",
+  "hooks": true,
+  "tag": true
+}

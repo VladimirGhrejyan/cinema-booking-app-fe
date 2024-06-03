@@ -1,0 +1,22 @@
+.header {
+    background-color: #001628;
+    color: white;
+    height: var(--header-height);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: lightblue;
+        transition: 0.3s;
+        text-decoration: underline;
+    }
+}
